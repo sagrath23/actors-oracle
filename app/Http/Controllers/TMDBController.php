@@ -36,6 +36,7 @@ class TMDBController extends Controller
     }
     
     public function suggestContents(Request $request){
+        Log::info('Showing user: '.$request->input('data'));
         return $this->callAPI('search/multi', 'query='.$request->json()->get('data'));
     }
     
