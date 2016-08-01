@@ -21,5 +21,5 @@ $app->get('api/movie/{id}', 'TMDBController@getMovie');
 
 $app->get('api/tv/{id}', 'TMDBController@getTvShow');
 
-//$app->post('api/search', 'TMDBController@suggestContents');
-$app->post('api/search', ['middleware' => 'csrf','TMDBController@suggestContents']);
+$app->post('api/search', 'TMDBController@suggestContents');
+//$app->post('api/search', ['middleware' => 'csrf','TMDBController@suggestContents']);
