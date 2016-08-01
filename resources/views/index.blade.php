@@ -278,7 +278,7 @@
     <a href="https://github.com/google/material-design-lite/blob/master/templates/text-only/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script type="text/javascript" src="../js/angularjs/angular.min.js"></script>
-    <script type="text/javascript" src="../js/angularjs/angular.resource.min.js"></script>
+    <script type="text/javascript" src="../js/angularjs/angular-resource.min.js"></script>
     <script type="text/javascript" src="../js/custom/modules/actorFinderModule.js"></script>
     <script type="text/javascript" src="../js/custom/controllers/actorFinderController.js"></script>
   </body>
