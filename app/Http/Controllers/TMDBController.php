@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 
+use Illuminate\Http\Request;
+
 class TMDBController extends Controller
 {
     #@var string url of API TMDB
@@ -35,10 +37,8 @@ class TMDBController extends Controller
         return $this->callAPI('tv/'.$idTv, 'append_to_response=credits');
     }
     
-    public function suggestContents(){
-        //Log::info('Showing user: '.$request->input('data'));
-        //return $this->callAPI('search/multi', 'query='.$request->json()->get('data'));
-        return 'Hola Mundo!!!';
+    public function suggestContents(Request $request){
+        return $this->callAPI('search/multi', 'query='.$request->json()->get('data'));
     }
     
     /**
