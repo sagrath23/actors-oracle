@@ -20,9 +20,11 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
             console.log('searching for '+$scope.searchTerm);
             Resource.search.find({data: $scope.searchTerm, format: 'json'}, 
                 function (data) {
+                    console.log('sucess');
                     console.log(data);
                 }, 
                 function (data) {
+                    console.log('fail');
                     console.log(data);
                 });
         };
