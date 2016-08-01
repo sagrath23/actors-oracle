@@ -18,7 +18,7 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
         
         $scope.suggestActors = function(){
             console.log('searching for '+$scope.searchTerm);
-            Resource.search.find({data: $scope.searchTerm, format: 'json'}, 
+            Resource.search.find({searchTerm: $scope.searchTerm, format: 'json'}, 
                 function (data) {
                     console.log('sucess');
                     console.log(data);
