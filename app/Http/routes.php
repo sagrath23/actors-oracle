@@ -15,12 +15,12 @@ $app->get('/', function () use ($app) {
     return view('index',['index'=>true]);//$app->version();
 });
 
-$app->group(['prefix'=>'api','middleware' => 'csrf'], function () use ($app) {
-    $app->get('actor/{id}', 'TMDBController@getActor');
+$app->group(['middleware' => 'csrf'], function () use ($app) {
+    $app->get('api/actor/{id}', 'TMDBController@getActor');
 
-    $app->get('movie/{id}', 'TMDBController@getMovie');
+    $app->get('api/movie/{id}', 'TMDBController@getMovie');
 
-    $app->get('tv/{id}', 'TMDBController@getTvShow');
+    $app->get('api/tv/{id}', 'TMDBController@getTvShow');
 
-    $app->post('search', 'TMDBController@suggestContents');
+    $app->post('api/search', 'TMDBController@suggestContents');
 });
