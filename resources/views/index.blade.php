@@ -66,9 +66,6 @@
                                 <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
                             </div>
                         </form>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-
                         <!-- search results-->
                         <ul class="demo-list-three mdl-list">
                             <li class="mdl-list__item mdl-list__item--three-line">
@@ -112,7 +109,8 @@
                                 </span>
                             </li>
                         </ul>
-
+                    </section>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                         <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
                             <i class="material-icons">play_circle_filled</i>
                         </header>
