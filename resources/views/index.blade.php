@@ -55,20 +55,18 @@
                 </div>
                 <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 </div>
-                <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                    <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
-                    <a href="#features" class="mdl-layout__tab">Features</a>
-                    <a href="#features" class="mdl-layout__tab">Details</a>
-                    <a href="#features" class="mdl-layout__tab">Technology</a>
-                    <a href="#features" class="mdl-layout__tab">FAQ</a>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
-                        <i class="material-icons" role="presentation">add</i>
-                        <span class="visuallyhidden">Add</span>
-                    </button>
-                </div>
             </header>
             <main class="mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active" id="overview">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <!-- search term -->
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
+                            </div>
+                        </form>
+                    </section>
                     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 
                         <!-- search results-->
@@ -86,7 +84,7 @@
                                     <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
                                 </span>
                             </li>
-                            
+
                             <li class="mdl-list__item mdl-list__item--three-line">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="material-icons  mdl-list__item-avatar">person</i>
