@@ -63,7 +63,6 @@
                         <!-- search term -->
                         <form action="#">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                                 <input class="mdl-textfield__input" type="text" id="sample3" ng-model="searchTerm" ng-keyup="suggestActors()">
                                 <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
                             </div>

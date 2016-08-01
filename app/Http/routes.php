@@ -22,3 +22,8 @@ $app->get('api/movie/{id}', 'TMDBController@getMovie');
 $app->get('api/tv/{id}', 'TMDBController@getTvShow');
 
 $app->get('api/search', 'TMDBController@suggestContents');
+
+// Returns the csrf token for the current visitor's session.
+$app->get('api/csrf', function() {
+    return Session::token();
+});
