@@ -37,7 +37,8 @@ class TMDBController extends Controller
         return $this->callAPI('tv/'.$idTv, 'append_to_response=credits');
     }
     
-    public function suggestContents(Request $request){
+    public function suggestContents(){
+        $request = Request::instance();
         return $this->callAPI('search/multi', 'query='.$request->json()->get('data'));
     }
     
