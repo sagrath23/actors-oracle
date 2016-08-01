@@ -38,8 +38,13 @@ class TMDBController extends Controller
     }
     
     public function suggestContents(){
+        $content = Request::getContent();
+        return $content;
+        /*
         $request = Request::instance();
         return $this->callAPI('search/multi', 'query='.$request->json()->get('data'));
+         * 
+         */
     }
     
     /**
