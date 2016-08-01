@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 angular.module('actorFinderApp', ['ngResource'])
-        .constant("CSRF_TOKEN", '{{ csrf_token() }}')
         .factory('Resource', ['$resource',
             function ($resource) {
-                console.log(CSRF_TOKEN);
                 return {
                     actors: $resource('api/actor/:id.:format', {id: '@id', format: '@format'}),
                     movies: $resource('api/movie/:id.:format', {id: '@id', format: '@format'}),
