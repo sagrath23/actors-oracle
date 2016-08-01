@@ -36,8 +36,7 @@ class TMDBController extends Controller
     }
     
     public function suggestContents(Request $request){
-        print_r($request);
-        exit;
+        return $request->all();
         //return $this->callAPI('search/multi', 'query='.$request->input('queryText'));
     }
     
