@@ -58,12 +58,12 @@
             </header>
             <main class="mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active" id="overview">
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <section id="search-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                         <!-- search term -->
                         <form action="#">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="sample3">
-                                <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
+                                <input class="mdl-textfield__input" type="text" id="sample3" ng-value="searchTerm" ng-keyup="suggestActors()">
+                                <label class="mdl-textfield__label" for="sample3"><h4>Are you searching info for ...</h4></label>
                             </div>
                         </form>
                     </section>

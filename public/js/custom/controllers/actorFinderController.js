@@ -16,5 +16,16 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
                 });
         };
         
+        $scope.suggestActors = function(){
+            console.log('searching for '+$scope.searchTerm);
+            Resource.search.find({data: $scope.searchTerm, format: 'json'}, 
+                function (data) {
+                    console.log(data);
+                }, 
+                function (data) {
+                    console.log(data);
+                });
+        };
+        
         $scope.init();
     }]);
