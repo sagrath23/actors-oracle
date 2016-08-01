@@ -12,7 +12,7 @@
 */
 
 $app->get('/', function () use ($app) {
-    return view('index',['index'=>true]);//$app->version();
+    return view('index',['index'=>true]);
 });
 
 $app->get('api/actor/{id}', 'TMDBController@getActor');

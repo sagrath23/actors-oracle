@@ -38,7 +38,7 @@ class TMDBController extends Controller
     }
     
     public function suggestContents(){
-        return 'Halo from POST';
+        return 'Halo from POST!!!';
         //return $this->callAPI('search/multi', 'query='.$searchTerm);
     }
     
