@@ -44,13 +44,13 @@
     }
     </style>
   </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" ng-app="actorFinderApp" ng-cloak="">
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-controller="ActorFinderController">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Name &amp; Title</h3>
+            <h3>The Actor's Oracle <small>Find everything about any actor</small></h3>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
@@ -277,5 +277,9 @@
     </div>
     <a href="https://github.com/google/material-design-lite/blob/master/templates/text-only/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script type="text/javascript" src="../js/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="../js/angularjs/angular.resource.min.js"></script>
+    <script type="text/javascript" src="../js/custom/modules/actorFinderModule.js"></script>
+    <script type="text/javascript" src="../js/custom/controllers/actorFinderController.js"></script>
   </body>
 </html>
