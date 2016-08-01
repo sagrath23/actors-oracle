@@ -1,0 +1,20 @@
+<h2>Actors</h2>
+<ul class="heroes">
+  <li *ngFor="let actor of actors" (click)="onSelect(actor)" [class.selected]="actor === selectedActor">
+    <span class="hero-element">
+      <span class="badge">{{actor.id}}</span> {{actor.name}}
+    </span>
+    <button class="delete-button" (click)="deleteActor(actor, $event)">Delete</button>
+  </li>
+</ul>
+<div class="error" *ngIf="error">{{error}}</div>
+<button (click)="addActor()">Add New Actor</button>
+<div *ngIf="addingActor">
+  <my-actor-detail (close)="close($event)"></my-actor-detail>
+</div>
+<div *ngIf="selectedActor">
+  <h2>
+    {{selectedActor.name | uppercase}} is my favorite actor
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
