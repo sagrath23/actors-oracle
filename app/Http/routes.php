@@ -15,10 +15,10 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
-$app->get('actor/{id}', 'TMDBController@getActor');
+$app->get('api/actor/{id}', 'TMDBController@getActor');
 
-$app->get('movie/{id}', 'TMDBController@getMovie');
+$app->get('api/movie/{id}', 'TMDBController@getMovie');
 
-$app->get('tv/{id}', 'TMDBController@getTvShow');
+$app->get('api/tv/{id}', 'TMDBController@getTvShow');
 
-$app->post('search', 'TMDBController@suggestContents');
+$app->post('api/search', 'TMDBController@suggestContents');
