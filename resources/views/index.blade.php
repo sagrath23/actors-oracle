@@ -63,7 +63,7 @@
                         <form action="#">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" id="sample3" ng-value="searchTerm" ng-keyup="suggestActors()">
-                                <label class="mdl-textfield__label" for="sample3"><h4>Are you searching info for ...</h4></label>
+                                <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
                             </div>
                         </form>
                     </section>
