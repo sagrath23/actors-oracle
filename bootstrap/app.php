@@ -19,6 +19,8 @@ try {
 |
 */
 
+$debug = env('APP_DEBUG', true);
+
 $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
