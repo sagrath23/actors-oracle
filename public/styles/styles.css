@@ -239,7 +239,8 @@ html, body {
     box-sizing: border-box;
     border-radius: 50%;
     background-color: #757575;
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
     color: #fff;
 }
 
