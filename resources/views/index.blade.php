@@ -83,12 +83,31 @@
                     </section>
                     <!-- person detail-->
                     <section id="person-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <!--
                         <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
                             <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>"
                         </header>
+                        -->
+                        <style>
+                            /*Ugly trick to update background image*/
+                            .person{
+                                background:url('https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>') bottom right 15% no-repeat #46B6AC !important;
+                            }
+                        </style>
+                        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand person">
+                                <h2 class="mdl-card__title-text"><% selectedPerson.name %></h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Personal Info
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                some extra fields
+                            </div>
+                        </div>
                         <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                             <div class="mdl-card__supporting-text">
-                                <h4><% selectedPerson.name %></h4>
+                                <h4>Biography</h4>
                                 <% selectedPerson.biography%>
                             </div>
                             <div class="mdl-card__actions">
