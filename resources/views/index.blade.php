@@ -90,7 +90,7 @@
                         -->
                         <div class="mdl-card mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <figure class="mdl-card__media">
-                                <img src="'https://image.tmdb.org/t/p/w300_and_h450_bestv2<% selectedPerson.profile_path %>" alt="profile_photo" />
+                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
                             </figure>
                         </div>
                         
