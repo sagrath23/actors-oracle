@@ -88,19 +88,13 @@
                             <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>"
                         </header>
                         -->
-                        <style>
-                            /*Ugly trick to update background image*/
-                            .person{
-                                background:url('https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>') bottom right 15% no-repeat #46B6AC !important;
-                            }
-                        </style>
                         <div class="mdl-card mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <figure class="mdl-card__media">
-                                <img src="'https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
+                                <img src="'https://image.tmdb.org/t/p/w300_and_h450_bestv2<% selectedPerson.profile_path %>" alt="profile_photo" />
                             </figure>
                         </div>
                         
-                        <div class="mdl-card mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <div class="mdl-card__supporting-text">
                                 <h4>Biography</h4>
                                 <% selectedPerson.biography%>
