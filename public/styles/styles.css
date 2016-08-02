@@ -44,12 +44,6 @@ html, body {
     min-height: 600px;
 }
 
-.mdl-grid{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
 #search-panel > form{
     width: 80%;
     position: relative;
@@ -57,7 +51,7 @@ html, body {
     margin-right: auto;
     clear: both;
 }
-/*
+
 .mdl-demo .mdl-card {
     height: auto;
     display: -webkit-flex;
@@ -67,10 +61,11 @@ html, body {
     -ms-flex-direction: column;
     flex-direction: column;
 }
-*/
+
 .mdl-demo .mdl-card > * {
     height: auto;
 }
+
 .mdl-demo .mdl-card .mdl-card__supporting-text {
     margin: 40px;
     -webkit-flex-grow: 1;
