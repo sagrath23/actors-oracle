@@ -28,6 +28,9 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
                         function(data){
                             console.log(data);
                             $scope.selectedPerson = data;
+                            //hide search panel
+                            $('#search-panel').hide('fast');
+                            $('#person-detail-panel').show('fast');
                         },
                         function(data){
                             console.log('something bad happened');

@@ -58,6 +58,7 @@
             </header>
             <main class="mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active" id="overview">
+                    <!-- search panel -->
                     <section id="search-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                         <!-- search term -->
                         <form action="#">
