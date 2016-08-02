@@ -7,10 +7,10 @@ angular.module('actorFinderApp', ['ngResource'])
         .factory('Resource', ['$resource',
             function ($resource) {
                 return {
-                    actors: $resource('api/actor/:id.:format', {id: '@id', format: '@format'}),
-                    movies: $resource('api/movie/:id.:format', {id: '@id', format: '@format'}),
-                    tvShow: $resource('api/tv/:id.:format', {id: '@id', format: '@format'}),
-                    search: $resource('api/search.:format', {format: '@format'}, {find: {method: 'POST', params: {data: 0, format: 'json'}}})
+                    actors: $resource('api/actor/:id', {id: '@id'}),
+                    movies: $resource('api/movie/:id', {id: '@id'}),
+                    tvShow: $resource('api/tv/:id', {id: '@id'}),
+                    search: $resource('api/search', {}, {find: {method: 'POST', params: {data: 0}}})
                 };
             }])
         //do another factory to sync data through all controllers

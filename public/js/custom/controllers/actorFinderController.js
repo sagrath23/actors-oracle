@@ -7,7 +7,7 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
     function ($scope, Resource, $filter) {
         $scope.init = function(){
             console.log('Controller loaded succesfully!!!');
-            Resource.actors.get({id: 1, format: 'json'}, 
+            Resource.actors.get({id: 1}, 
                 function (data) {
                     console.log(data);
                 }, 
@@ -18,7 +18,7 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
         
         $scope.suggestActors = function(){
             console.log('searching for '+$scope.searchTerm);
-            Resource.search.find({searchTerm: $scope.searchTerm, format: 'json'}, 
+            Resource.search.find({data: $scope.searchTerm}, 
                 function (data) {
                     console.log('sucess');
                     console.log(data);
