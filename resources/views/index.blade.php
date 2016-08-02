@@ -60,26 +60,28 @@
                 <div class="mdl-layout__tab-panel is-active" id="overview">
                     <!-- search panel -->
                     <section id="search-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <!-- search term -->
-                        <form action="#">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="sample3" ng-model="searchTerm" ng-keyup="suggestActors()">
-                                <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
-                            </div>
-                        </form>
-                        <!-- search results-->
-                        <ul class="demo-list-icon mdl-list">
-                            <li class="mdl-list__item selectable" ng-repeat="actor in suggestedActors track by $index" ng-click="showItem(actor)">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="material-icons mdl-list__item-face" ng-if="actor.media_type === 'person'">face</i>
-                                    <i class="material-icons mdl-list__item-movie" ng-if="actor.media_type === 'movie'">movie</i>
-                                    <i class="material-icons mdl-list__item-tv" ng-if="actor.media_type === 'tv'">tv</i>
-                                    <p ng-if="actor.media_type === 'person'"><% actor.name%></p>
-                                    <p ng-if="actor.media_type === 'movie'"><% actor.title%></p>
-                                    <p ng-if="actor.media_type === 'tv'"><% actor.name%></p>
-                                </span>
-                            </li>
-                        </ul>
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+                            <!-- search term -->
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3" ng-model="searchTerm" ng-keyup="suggestActors()">
+                                    <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
+                                </div>
+                            </form>
+                            <!-- search results-->
+                            <ul class="demo-list-icon mdl-list">
+                                <li class="mdl-list__item selectable" ng-repeat="actor in suggestedActors track by $index" ng-click="showItem(actor)">
+                                    <span class="mdl-list__item-primary-content">
+                                        <i class="material-icons mdl-list__item-face" ng-if="actor.media_type === 'person'">face</i>
+                                        <i class="material-icons mdl-list__item-movie" ng-if="actor.media_type === 'movie'">movie</i>
+                                        <i class="material-icons mdl-list__item-tv" ng-if="actor.media_type === 'tv'">tv</i>
+                                        <p ng-if="actor.media_type === 'person'"><% actor.name%></p>
+                                        <p ng-if="actor.media_type === 'movie'"><% actor.title%></p>
+                                        <p ng-if="actor.media_type === 'tv'"><% actor.name%></p>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </section>
                     <!-- person detail-->
                     <section id="person-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
