@@ -91,20 +91,16 @@
                         <style>
                             /*Ugly trick to update background image*/
                             .person{
-                                background:url('https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>') bottom right 15% no-repeat #46B6AC !important;
+                                background:url('https://image.tmdb.org/t/p/w300_and_h300_bestv2/<% selectedPerson.profile_path %>') bottom right 15% no-repeat #46B6AC !important;
                             }
                         </style>
-                        <div class="demo-card-square mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
-                            <div class="mdl-card__title mdl-card--expand person">
-                                <h2 class="mdl-card__title-text"><% selectedPerson.name %></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Personal Info
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                some extra fields
+                        <div class="demo-card-image mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand"></div>
+                            <div class="mdl-card__actions">
+                                <span class="demo-card-image__filename"><% selectedPerson.name %></span>
                             </div>
                         </div>
+                        
                         <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <div class="mdl-card__supporting-text">
                                 <h4>Biography</h4>

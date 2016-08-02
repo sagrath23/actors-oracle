@@ -243,13 +243,20 @@ html, body {
     color: #fff;
 }
 
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
+.demo-card-image.mdl-card {
+  /*width: 256px;
+  height: 256px;*/
+  background: url('../assets/demos/image_card.jpg') center / cover;
 }
-.demo-card-square > .mdl-card__title {
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
   color: #fff;
-  background:url('https://getmdl.io/assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 #person-detail-panel, #movie-detail-panel, #tv-detail-panel{
