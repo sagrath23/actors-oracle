@@ -190,7 +190,7 @@
                                     </li>
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            <strong>Status:</strong> <% selectedTv.status'%>
+                                            <strong>Status:</strong> <% selectedTv.status%>
                                         </span>
                                     </li>
                                     <li class="mdl-list__item">
@@ -200,12 +200,12 @@
                                     </li>
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            <strong>Seasons:</strong> <% selectedTv.number_of_seasons'%>
+                                            <strong>Seasons:</strong> <% selectedTv.number_of_seasons%>
                                         </span>
                                     </li>
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            <strong>Episodes:</strong> <% selectedTv.number_of_episodes'%>
+                                            <strong>Episodes:</strong> <% selectedTv.number_of_episodes%>
                                         </span>
                                     </li>
                                     <li class="mdl-list__item">
