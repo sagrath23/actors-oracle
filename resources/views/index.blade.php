@@ -88,45 +88,39 @@
                             <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>"
                         </header>
                         -->
-                        <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
-                            <div class="mdl-card">
-                                <figure class="mdl-card__media">
-                                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
-                                </figure>
-                                <div class="mdl-card__title">
-                                    <h2 class="mdl-card__title-text"><% selectedPerson.name%></h2>
-                                </div>
+                        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <figure class="mdl-card__media">
+                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
+                            </figure>
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><% selectedPerson.name%></h2>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
-                            <div class="mdl-card ">
-                                <div class="mdl-card__supporting-text">
-                                    <ul class="mdl-list">
-                                        <li class="mdl-list__item">
-                                            <span class="mdl-list__item-primary-content">
-                                                Birthday: <% selectedPerson.birthday | date:'MMMM d, y'%>
-                                            </span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span class="mdl-list__item-primary-content">
-                                                Place of birth: <% selectedPerson.place_of_birth%>
-                                            </span>
-                                        </li>
-                                        <li class="mdl-list__item">
-                                            <span class="mdl-list__item-primary-content">
-                                                Website: <% selectedPerson.homepage%>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="mdl-card mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <ul class="mdl-list">
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            Birthday: <% selectedPerson.birthday | date:'MMMM d, y'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            Place of birth: <% selectedPerson.place_of_birth%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            Website: <% selectedPerson.homepage%>
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
-                            <div class="mdl-card">
-                                <div class="mdl-card__supporting-text">
-                                    <h4>Biography</h4>
-                                    <% selectedPerson.biography%>
-                                </div>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Biography</h4>
+                                <% selectedPerson.biography%>
                             </div>
                         </div>
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
