@@ -92,8 +92,36 @@
                             <figure class="mdl-card__media">
                                 <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
                             </figure>
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><% selectedPerson.name%></h2>
+                            </div>
                         </div>
-                        
+                        <div class="mdl-card mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <ul class="mdl-list">
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            Birthday: <% selectedPerson.birthday | date:'MMMM d, y'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            Place of birth: <% selectedPerson.place_of_birth%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            Place of birth: <% selectedPerson.place_of_birth%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            Place of birth: <% selectedPerson.place_of_birth%>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <div class="mdl-card__supporting-text">
                                 <h4>Biography</h4>
@@ -262,6 +290,7 @@
         <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../js/angularjs/angular.min.js"></script>
+        <script type="text/javascript" src="../js/angularjs/i18n/angular-locale_en-us.js"></script>
         <script type="text/javascript" src="../js/angularjs/angular-resource.min.js"></script>
         <script type="text/javascript" src="../js/custom/modules/actorFinderModule.js"></script>
         <script type="text/javascript" src="../js/custom/controllers/actorFinderController.js"></script>
