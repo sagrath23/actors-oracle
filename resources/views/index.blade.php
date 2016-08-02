@@ -185,7 +185,7 @@
                                 <ul class="mdl-list">
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            <strong>Original name:</strong> <% selectedTv.original_name'%>
+                                            <strong>Original name:</strong> <% selectedTv.original_name %>
                                         </span>
                                     </li>
                                     <li class="mdl-list__item">
