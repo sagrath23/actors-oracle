@@ -96,7 +96,7 @@
                                 <h2 class="mdl-card__title-text"><% selectedPerson.name%></h2>
                             </div>
                         </div>
-                        <div class="mdl-card mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                        <div class="mdl-card mdl-cell mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <div class="mdl-card__supporting-text">
                                 <ul class="mdl-list">
                                     <li class="mdl-list__item">
@@ -111,12 +111,7 @@
                                     </li>
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            Place of birth: <% selectedPerson.place_of_birth%>
-                                        </span>
-                                    </li>
-                                    <li class="mdl-list__item">
-                                        <span class="mdl-list__item-primary-content">
-                                            Place of birth: <% selectedPerson.place_of_birth%>
+                                            Website: <% selectedPerson.homepage%>
                                         </span>
                                     </li>
                                 </ul>
