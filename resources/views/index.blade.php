@@ -82,7 +82,7 @@
                         </ul>
                     </section>
                     <!-- person detail-->
-                    <section id="person-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <section id="person-detail-panel" class="section--center mdl-grid mdl-shadow--2dp">
                         <!--
                         <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
                             <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>"
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         
-                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <div class="mdl-card__supporting-text">
                                 <h4>Biography</h4>
                                 <% selectedPerson.biography%>
