@@ -150,7 +150,7 @@
                         <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
                             <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h300_bestv2/<% selectedItem.profile_path %>"
                         </header>
-                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                             <div class="mdl-card__supporting-text">
                                 <h4><% selectedItem.name %></h4>
                             </div>
