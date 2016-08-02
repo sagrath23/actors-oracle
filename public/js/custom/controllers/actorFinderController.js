@@ -22,7 +22,6 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
         
         $scope.showItem = function(item){
             console.log('show item');
-            $scope.selectedItem = item;
             switch(item.media_type){
                 case 'person':{
                     Resource.actors.get({id: item.id},

@@ -73,7 +73,9 @@
                                     <i class="material-icons mdl-list__item-face" ng-if="actor.media_type === 'person'">face</i>
                                     <i class="material-icons mdl-list__item-movie" ng-if="actor.media_type === 'movie'">movie</i>
                                     <i class="material-icons mdl-list__item-tv" ng-if="actor.media_type === 'tv'">tv</i>
-                                    <% actor.name%>
+                                    <p ng-if="actor.media_type === 'person'"><% actor.name%></p>
+                                    <p ng-if="actor.media_type === 'movie'"><% actor.title%></p>
+                                    <p ng-if="actor.media_type === 'tv'"><% actor.name%></p>
                                 </span>
                             </li>
                         </ul>
@@ -85,7 +87,8 @@
                         </header>
                         <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                             <div class="mdl-card__supporting-text">
-                                <h4><% selectedItem.name %></h4>
+                                <h4><% selectedPerson.name %></h4>
+                                <% selectedPerson.biography%>
                             </div>
                             <div class="mdl-card__actions">
                                 <a href="#" class="mdl-button">Read our features</a>
