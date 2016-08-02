@@ -166,7 +166,7 @@
                                 <% selectedMovie.overview%>
                             </div>
                         </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2" ng-click="goBack()">
                             <i class="material-icons">undo</i>
                         </button>
                     </section>
@@ -222,7 +222,7 @@
                                 <% selectedTv.overview%>
                             </div>
                         </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3" ng-click="goBack()">
                             <i class="material-icons">undo</i>
                         </button>
                     </section>
