@@ -263,3 +263,8 @@ html, body {
 .mdl-card__media > img {
   max-width: 100%;
 }
+
+#person-detail-panel .mdl-grid{
+    flex-flow: row wrap;
+    justify-content:  space-around;
+}
