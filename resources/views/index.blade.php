@@ -68,26 +68,24 @@
                         </form>
                         <!-- search results-->
                         <ul class="demo-list-icon mdl-list">
-                            <li class="mdl-list__item" ng-repeat="actor in suggestedActors track by $index">
-                              <span class="mdl-list__item-primary-content">
-                                  <i class="material-icons mdl-list__item-face" ng-if="actor.media_type === 'person'">face</i>
-                                  <i class="material-icons mdl-list__item-movie" ng-if="actor.media_type === 'movie'">movie</i>
-                                  <i class="material-icons mdl-list__item-tv" ng-if="actor.media_type === 'tv'">tv</i>
-                                <% actor.name%>
-                            </span>
+                            <li class="mdl-list__item selectable" ng-repeat="actor in suggestedActors track by $index" ng-click="showItem(actor)">
+                                <span class="mdl-list__item-primary-content">
+                                    <i class="material-icons mdl-list__item-face" ng-if="actor.media_type === 'person'">face</i>
+                                    <i class="material-icons mdl-list__item-movie" ng-if="actor.media_type === 'movie'">movie</i>
+                                    <i class="material-icons mdl-list__item-tv" ng-if="actor.media_type === 'tv'">tv</i>
+                                    <% actor.name%>
+                                </span>
                             </li>
-                            
-                             </ul>
-                        
+                        </ul>
                     </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <!-- person detail-->
+                    <section id="person-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                         <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-                            <i class="material-icons">play_circle_filled</i>
+                            <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>"
                         </header>
                         <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                             <div class="mdl-card__supporting-text">
-                                <h4>Features</h4>
-                                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+                                <h4><% selectedItem.name %></h4>
                             </div>
                             <div class="mdl-card__actions">
                                 <a href="#" class="mdl-button">Read our features</a>
@@ -102,79 +100,49 @@
                             <li class="mdl-menu__item">Dolor</li>
                         </ul>
                     </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
-                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                                <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Lorem ipsum dolor sit amet</h5>
-                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Lorem ipsum dolor sit amet</h5>
-                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Lorem ipsum dolor sit amet</h5>
-                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                                </div>
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
-                            </div>
-                        </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-                            <i class="material-icons">more_vert</i>
-                        </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <!-- movie detail-->
+                    <section id="movie-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+                            <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedItem.profile_path %>"
+                        </header>
+                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                             <div class="mdl-card__supporting-text">
-                                <h4>Technology</h4>
-                                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+                                <h4><% selectedItem.name %></h4>
                             </div>
                             <div class="mdl-card__actions">
                                 <a href="#" class="mdl-button">Read our features</a>
                             </div>
                         </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
                             <i class="material-icons">more_vert</i>
                         </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
+                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
                             <li class="mdl-menu__item">Lorem</li>
                             <li class="mdl-menu__item" disabled>Ipsum</li>
                             <li class="mdl-menu__item">Dolor</li>
                         </ul>
                     </section>
-                    <section class="section--footer mdl-color--white mdl-grid">
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+                    <!-- tv show detail-->
+                    <section id="person-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+                            <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedItem.profile_path %>"
+                        </header>
+                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+                            <div class="mdl-card__supporting-text">
+                                <h4><% selectedItem.name %></h4>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a href="#" class="mdl-button">Read our features</a>
+                            </div>
                         </div>
-                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Lorem ipsum dolor sit amet</h5>
-                            Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-                        </div>
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
-                        </div>
-                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Lorem ipsum dolor sit amet</h5>
-                            Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
+                            <i class="material-icons">more_vert</i>
+                        </button>
+                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
+                            <li class="mdl-menu__item">Lorem</li>
+                            <li class="mdl-menu__item" disabled>Ipsum</li>
+                            <li class="mdl-menu__item">Dolor</li>
+                        </ul>
                     </section>
                 </div>
                 <div class="mdl-layout__tab-panel" id="features">
