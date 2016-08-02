@@ -85,11 +85,6 @@
                     </section>
                     <!-- person detail-->
                     <section id="person-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
-                        <!--
-                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-                            <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>"
-                        </header>
-                        -->
                         <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <figure class="mdl-card__media">
                                 <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
@@ -131,47 +126,105 @@
                     </section>
                     <!-- movie detail-->
                     <section id="movie-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-                            <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedItem.profile_path %>"
-                        </header>
-                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-card__supporting-text">
-                                <h4><% selectedItem.name %></h4>
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
+                        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <figure class="mdl-card__media">
+                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedMovie.poster_path %>" alt="poster_photo" />
+                            </figure>
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><% selectedMovie.title%> <small><% selectedMovie.tagline%></small></h2>
                             </div>
                         </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-                            <i class="material-icons">more_vert</i>
+                        <div class="mdl-card mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <ul class="mdl-list">
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Original title:</strong> <% selectedMovie.original_title %>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Release date:</strong> <% selectedMovie.release_date | date:'MMMM d, y'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Status:</strong> <% selectedMovie.status%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Website:</strong> <% selectedMovie.homepage%>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Overview</h4>
+                                <% selectedMovie.overview%>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
+                            <i class="material-icons">undo</i>
                         </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
                     </section>
                     <!-- tv show detail-->
                     <section id="tv-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-                            <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h300_bestv2/<% selectedItem.profile_path %>"
-                        </header>
-                        <div class="mdl-card mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-card__supporting-text">
-                                <h4><% selectedItem.name %></h4>
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
+                        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <figure class="mdl-card__media">
+                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedTv.poster_path %>" alt="poster_photo" />
+                            </figure>
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><% selectedTv.name%></h2>
                             </div>
                         </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-                            <i class="material-icons">more_vert</i>
+                        <div class="mdl-card mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <ul class="mdl-list">
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Original name:</strong> <% selectedTv.original_name'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Status:</strong> <% selectedTv.status'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Last air date:</strong> <% selectedTv.last_air_date | date:'MMMM d, y'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Seasons:</strong> <% selectedTv.number_of_seasons'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Episodes:</strong> <% selectedTv.number_of_episodes'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Website:</strong> <% selectedTv.homepage%>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Overview</h4>
+                                <% selectedTv.overview%>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
+                            <i class="material-icons">undo</i>
                         </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
                     </section>
                 </div>
                 <footer class="mdl-mega-footer">

@@ -43,6 +43,10 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
                         function(data){
                             console.log(data);
                             $scope.selectedMovie = data;
+                            //hide search panel
+                            $('#search-panel').hide('slow');
+                            $('#movie-detail-panel').show('slow');
+                            $('#movie-detail-panel').css({'display': 'flex'});
                         },
                         function(data){
                             console.log('something bad happened');
@@ -53,7 +57,11 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
                     Resource.tvShow.get({id: item.id},
                         function(data){
                             console.log(data);
-                            $scope.selectedMovie = data;
+                            $scope.selectedTv = data;
+                            //hide search panel
+                            $('#search-panel').hide('slow');
+                            $('#tv-detail-panel').show('slow');
+                            $('#tv-detail-panel').css({'display': 'flex'});
                         },
                         function(data){
                             console.log('something bad happened');
