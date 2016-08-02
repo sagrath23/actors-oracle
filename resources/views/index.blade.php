@@ -260,6 +260,7 @@
             </main>
         </div>
         <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../js/angularjs/angular.min.js"></script>
         <script type="text/javascript" src="../js/angularjs/angular-resource.min.js"></script>
         <script type="text/javascript" src="../js/custom/modules/actorFinderModule.js"></script>
