@@ -238,28 +238,16 @@ html, body {
     width: 40px;
     box-sizing: border-box;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: #222;
     font-size: 40px;
     text-align: center;
     color: #fff;
 }
 
-.demo-card-image.mdl-card {
-  width: 300px;
-  height: 450px;
-  background: url('https://getmdl.io/assets/demos/image_card.jpg') center / cover;
-}
-.demo-card-image > .mdl-card__actions {
-  height: 52px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
-}
-.demo-card-image__filename {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-}
-
 #person-detail-panel, #movie-detail-panel, #tv-detail-panel{
     display: none;
+}
+
+.mdl-card__media > img {
+  max-width: 100%;
 }

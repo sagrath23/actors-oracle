@@ -94,20 +94,16 @@
                                 background:url('https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>') bottom right 15% no-repeat #46B6AC !important;
                             }
                         </style>
-                        <div class="demo-card-image person mdl-card mdl-cell mdl-shadow--2dp">
-                            <div class="mdl-card__title mdl-card--expand"></div>
-                            <div class="mdl-card__actions">
-                                <span class="demo-card-image__filename"><% selectedPerson.name %></span>
-                            </div>
+                        <div class="mdl-card mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <figure class="mdl-card__media">
+                                <img src="'https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
+                            </figure>
                         </div>
                         
-                        <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                        <div class="mdl-card mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <div class="mdl-card__supporting-text">
                                 <h4>Biography</h4>
                                 <% selectedPerson.biography%>
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
                             </div>
                         </div>
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
