@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-
 use Illuminate\Http\Request;
 
 class TMDBController extends Controller
@@ -37,9 +35,15 @@ class TMDBController extends Controller
         return $this->callAPI('tv/'.$idTv, 'append_to_response=credits');
     }
     
-    public function suggestContents(){
-        return 'Halo from POST!!!';
-        //return $this->callAPI('search/multi', 'query='.$searchTerm);
+    public function suggestContents(Request $request){
+        if ($request->has('data')) {
+            $stringPattern = $request->input('data');
+            return $this->callAPI('search/multi', 'query='.$stringPattern);
+        }
+        else{
+            return null;
+        }
+        
     }
     
     /**
