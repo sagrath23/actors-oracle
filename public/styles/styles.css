@@ -244,9 +244,9 @@ html, body {
 }
 
 .demo-card-image.mdl-card {
-  /*width: 256px;
-  height: 256px;*/
-  background: url('../assets/demos/image_card.jpg') center / cover;
+  width: 300px;
+  height: 450px;
+  background: url('https://getmdl.io/assets/demos/image_card.jpg') center / cover;
 }
 .demo-card-image > .mdl-card__actions {
   height: 52px;
