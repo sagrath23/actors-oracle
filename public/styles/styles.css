@@ -41,6 +41,13 @@ html, body {
 .mdl-demo main > .mdl-layout__tab-panel {
     padding: 8px;
     padding-top: 48px;
+    min-height: 600px;
+}
+
+.mdl-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 /*
 .mdl-demo .mdl-card {

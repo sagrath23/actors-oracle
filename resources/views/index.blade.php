@@ -101,17 +101,17 @@
                                 <ul class="mdl-list">
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            Birthday: <% selectedPerson.birthday | date:'MMMM d, y'%>
+                                            <strong>Birthday:</strong> <% selectedPerson.birthday | date:'MMMM d, y'%>
                                         </span>
                                     </li>
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            Place of birth: <% selectedPerson.place_of_birth%>
+                                            <strong>Place of birth:</strong> <% selectedPerson.place_of_birth%>
                                         </span>
                                     </li>
                                     <li class="mdl-list__item">
                                         <span class="mdl-list__item-primary-content">
-                                            Website: <% selectedPerson.homepage%>
+                                            <strong>Website:</strong> <% selectedPerson.homepage%>
                                         </span>
                                     </li>
                                 </ul>
