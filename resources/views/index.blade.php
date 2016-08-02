@@ -67,48 +67,18 @@
                             </div>
                         </form>
                         <!-- search results-->
-                        <ul class="demo-list-three mdl-list">
-                            <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="material-icons mdl-list__item-avatar">person</i>
-                                    <span>Bryan Cranston</span>
-                                    <span class="mdl-list__item-text-body">
-                                        Bryan Cranston played the role of Walter in Breaking Bad. He is also known
-                                        for playing Hal in Malcom in the Middle.
-                                    </span>
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-                                </span>
+                        <ul class="demo-list-icon mdl-list">
+                            <li class="mdl-list__item" ng-repeat="actor in suggestedActors track by $index">
+                              <span class="mdl-list__item-primary-content">
+                                  <i class="material-icons mdl-list__item-face" ng-if="actor.media_type === 'person'">face</i>
+                                  <i class="material-icons mdl-list__item-movie" ng-if="actor.media_type === 'movie'">movie</i>
+                                  <i class="material-icons mdl-list__item-tv" ng-if="actor.media_type === 'tv'">tv</i>
+                                <% actor.name%>
+                            </span>
                             </li>
-
-                            <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="material-icons  mdl-list__item-avatar">person</i>
-                                    <span>Aaron Paul</span>
-                                    <span class="mdl-list__item-text-body">
-                                        Aaron Paul played the role of Jesse in Breaking Bad. He also featured in
-                                        the "Need For Speed" Movie.
-                                    </span>
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-                                </span>
-                            </li>
-                            <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="material-icons  mdl-list__item-avatar">person</i>
-                                    <span>Bob Odenkirk</span>
-                                    <span class="mdl-list__item-text-body">
-                                        Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the
-                                        character, Bob stars in his own show now, called "Better Call Saul".
-                                    </span>
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-                                </span>
-                            </li>
-                        </ul>
+                            
+                             </ul>
+                        
                     </section>
                     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                         <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">

@@ -22,6 +22,8 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
                 function (data) {
                     console.log('sucess');
                     console.log(data);
+                    $scope.suggestedActors = data.results;
+                    console.log($scope.suggestedActors);
                 }, 
                 function (data) {
                     console.log('fail');

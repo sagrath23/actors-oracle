@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-angular.module('actorFinderApp', ['ngResource'])
-        .factory('Resource', ['$resource',
+angular.module('actorFinderApp', ['ngResource'], 
+    function($interpolateProvider) {
+        $interpolateProvider.startSymbol('<%');
+        $interpolateProvider.endSymbol('%>');
+    }).factory('Resource', ['$resource',
             function ($resource) {
                 return {
                     actors: $resource('api/actor/:id', {id: '@id'}),
