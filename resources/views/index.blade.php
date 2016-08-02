@@ -58,267 +58,188 @@
             </header>
             <main class="mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active" id="overview">
+                    <!-- search panel -->
                     <section id="search-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <!-- search term -->
-                        <form action="#">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="sample3" ng-model="searchTerm" ng-keyup="suggestActors()">
-                                <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
-                            </div>
-                        </form>
-                        <!-- search results-->
-                        <ul class="demo-list-three mdl-list">
-                            <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="material-icons mdl-list__item-avatar">person</i>
-                                    <span>Bryan Cranston</span>
-                                    <span class="mdl-list__item-text-body">
-                                        Bryan Cranston played the role of Walter in Breaking Bad. He is also known
-                                        for playing Hal in Malcom in the Middle.
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+                            <!-- search term -->
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3" ng-model="searchTerm" ng-keyup="suggestActors()">
+                                    <label class="mdl-textfield__label" for="sample3">Are you searching info for ...</label>
+                                </div>
+                            </form>
+                            <!-- search results-->
+                            <ul class="demo-list-icon mdl-list">
+                                <li class="mdl-list__item selectable" ng-repeat="actor in suggestedActors track by $index" ng-click="showItem(actor)">
+                                    <span class="mdl-list__item-primary-content">
+                                        <i class="material-icons mdl-list__item-face" ng-if="actor.media_type === 'person'">face</i>
+                                        <i class="material-icons mdl-list__item-movie" ng-if="actor.media_type === 'movie'">movie</i>
+                                        <i class="material-icons mdl-list__item-tv" ng-if="actor.media_type === 'tv'">tv</i>
+                                        <p ng-if="actor.media_type === 'person'"><% actor.name%></p>
+                                        <p ng-if="actor.media_type === 'movie'"><% actor.title%></p>
+                                        <p ng-if="actor.media_type === 'tv'"><% actor.name%></p>
                                     </span>
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-                                </span>
-                            </li>
-
-                            <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="material-icons  mdl-list__item-avatar">person</i>
-                                    <span>Aaron Paul</span>
-                                    <span class="mdl-list__item-text-body">
-                                        Aaron Paul played the role of Jesse in Breaking Bad. He also featured in
-                                        the "Need For Speed" Movie.
-                                    </span>
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-                                </span>
-                            </li>
-                            <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="material-icons  mdl-list__item-avatar">person</i>
-                                    <span>Bob Odenkirk</span>
-                                    <span class="mdl-list__item-text-body">
-                                        Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the
-                                        character, Bob stars in his own show now, called "Better Call Saul".
-                                    </span>
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-                                </span>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-                            <i class="material-icons">play_circle_filled</i>
-                        </header>
-                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-card__supporting-text">
-                                <h4>Features</h4>
-                                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
-                            </div>
-                        </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-                            <i class="material-icons">more_vert</i>
-                        </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
-                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                                <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Lorem ipsum dolor sit amet</h5>
-                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Lorem ipsum dolor sit amet</h5>
-                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Lorem ipsum dolor sit amet</h5>
-                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                                </div>
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
-                            </div>
-                        </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-                            <i class="material-icons">more_vert</i>
-                        </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
-                            <div class="mdl-card__supporting-text">
-                                <h4>Technology</h4>
-                                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
-                            </div>
-                        </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-                            <i class="material-icons">more_vert</i>
-                        </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
-                    </section>
-                    <section class="section--footer mdl-color--white mdl-grid">
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
-                        </div>
-                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Lorem ipsum dolor sit amet</h5>
-                            Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-                        </div>
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
-                        </div>
-                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Lorem ipsum dolor sit amet</h5>
-                            Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-                        </div>
-                    </section>
-                </div>
-                <div class="mdl-layout__tab-panel" id="features">
-                    <section class="section--center mdl-grid mdl-grid--no-spacing">
-                        <div class="mdl-cell mdl-cell--12-col">
-                            <h4>Features</h4>
-                            Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-                            <ul class="toc">
-                                <h4>Contents</h4>
-                                <a href="#lorem1">Lorem ipsum</a>
-                                <a href="#lorem2">Lorem ipsum</a>
-                                <a href="#lorem3">Lorem ipsum</a>
-                                <a href="#lorem4">Lorem ipsum</a>
-                                <a href="#lorem5">Lorem ipsum</a>
+                                </li>
                             </ul>
-
-                            <h5 id="lorem1">Lorem ipsum dolor sit amet</h5>
-                            Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
-                            <ul>
-                                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
-                                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
-                                <li>Lorem labore proident officia excepteur do.</li>
-                            </ul>
-
-                            <p>
-                                Sit qui est voluptate proident minim cillum in aliquip cupidatat labore pariatur id tempor id. Proident occaecat occaecat sint mollit tempor duis dolor cillum anim. Dolore sunt ea mollit fugiat in aliqua consequat nostrud aliqua ut irure in dolore. Proident aliqua culpa sint sint exercitation. Non proident occaecat reprehenderit veniam et proident dolor id culpa ea tempor do dolor. Nulla adipisicing qui fugiat id dolor. Nostrud magna voluptate irure veniam veniam labore ipsum deserunt adipisicing laboris amet eu irure. Sunt dolore nisi velit sit id. Nostrud voluptate labore proident cupidatat enim amet Lorem officia magna excepteur occaecat eu qui. Exercitation culpa deserunt non et tempor et non.
-                            </p>
-                            <p>
-                                Do dolor eiusmod eu mollit dolore nostrud deserunt cillum irure esse sint irure fugiat exercitation. Magna sit voluptate id in tempor elit veniam enim cupidatat ea labore elit. Aliqua pariatur eu nulla labore magna dolore mollit occaecat sint commodo culpa. Eu non minim duis pariatur Lorem quis exercitation. Sunt qui ex incididunt sit anim incididunt sit elit ad officia id.
-                            </p>
-                            <p id="lorem2">
-                                Tempor voluptate ex consequat fugiat aliqua. Do sit et reprehenderit culpa deserunt culpa. Excepteur quis minim mollit irure nulla excepteur enim quis in laborum. Aliqua elit voluptate ad deserunt nulla reprehenderit adipisicing sint. Est in eiusmod exercitation esse commodo. Ea reprehenderit exercitation veniam adipisicing minim nostrud. Veniam dolore ex ea occaecat non enim minim id ut aliqua adipisicing ad. Occaecat excepteur aliqua tempor cupidatat aute dolore deserunt ipsum qui incididunt aliqua occaecat sit quis. Culpa sint aliqua aliqua reprehenderit veniam irure fugiat ea ad.
-                            </p>
-                            <p>
-                                Eu minim fugiat laborum irure veniam Lorem aliqua enim. Aliqua veniam incididunt consequat irure consequat tempor do nisi deserunt. Elit dolore ad quis consectetur sint laborum anim magna do nostrud amet. Ea nulla sit consequat quis qui irure dolor. Sint deserunt excepteur consectetur magna irure. Dolor tempor exercitation dolore pariatur incididunt ut laboris fugiat ipsum sunt veniam aute sunt labore. Non dolore sit nostrud eu ad excepteur cillum eu ex Lorem duis.
-                            </p>
-                            <p>
-                                Id occaecat velit non ipsum occaecat aliqua quis ut. Eiusmod est magna non esse est ex incididunt aute ullamco. Cillum excepteur sint ipsum qui quis velit incididunt amet. Qui deserunt anim enim laborum cillum reprehenderit duis mollit amet ad officia enim. Minim sint et quis aliqua aliqua do minim officia dolor deserunt ipsum laboris. Nulla nisi voluptate consectetur est voluptate et amet. Occaecat ut quis adipisicing ad enim. Magna est magna sit duis proident veniam reprehenderit fugiat reprehenderit enim velit ex. Ullamco laboris culpa irure aliquip ad Lorem consequat veniam ad ipsum eu. Ipsum culpa dolore sunt officia laborum quis.
-                            </p>
-
-                            <h5 id="lorem3">Lorem ipsum dolor sit amet</h5>
-
-                            <p id="lorem4">
-                                Eiusmod nulla aliquip ipsum reprehenderit nostrud non excepteur mollit amet esse est est dolor. Dolore quis pariatur sit consectetur veniam esse ullamco duis Lorem qui enim ut veniam. Officia deserunt minim duis laborum dolor in velit pariatur commodo ullamco eu. Aute adipisicing ad duis labore laboris do mollit dolor cillum sunt aliqua ullamco. Esse tempor quis cillum consequat reprehenderit. Adipisicing proident anim eu sint elit aliqua anim dolore cupidatat fugiat aliquip qui.
-                            </p>
-                            <p id="lorem5">
-                                Nisi eiusmod esse cupidatat excepteur exercitation ipsum reprehenderit nostrud deserunt aliqua ullamco. Anim est irure commodo eiusmod pariatur officia. Est dolor ipsum excepteur magna aliqua ad veniam irure qui occaecat eiusmod aute fugiat commodo. Quis mollit incididunt amet sit minim velit eu fugiat voluptate excepteur. Sit minim id pariatur ex cupidatat cupidatat nostrud nostrud ipsum.
-                            </p>
-                            <p>
-                                Enim ea officia excepteur ad veniam id reprehenderit eiusmod esse mollit consequat. Esse non aute ullamco Lorem aliqua qui dolore irure eiusmod aute aliqua proident labore aliqua. Ipsum voluptate voluptate exercitation laborum deserunt nulla elit aliquip et minim ex veniam. Duis cupidatat aute sunt officia mollit dolor ad elit ad aute labore nostrud duis pariatur. In est sint voluptate consectetur velit ea non labore. Ut duis ea aliqua consequat nulla laboris fugiat aute id culpa proident. Minim eiusmod laboris enim Lorem nisi excepteur mollit voluptate enim labore reprehenderit officia mollit.
-                            </p>
-                            <p>
-                                Cupidatat labore nisi ut sunt voluptate quis sunt qui ad Lorem esse nisi. Ex esse velit ullamco incididunt occaecat dolore veniam tempor minim adipisicing amet. Consequat in exercitation est elit anim consequat cillum sint labore cillum. Aliquip mollit laboris ad labore anim.
-                            </p>
                         </div>
+                    </section>
+                    <!-- person detail-->
+                    <section id="person-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <figure class="mdl-card__media">
+                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>" alt="profile_photo" />
+                            </figure>
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><% selectedPerson.name%></h2>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <ul class="mdl-list">
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Birthday:</strong> <% selectedPerson.birthday | date:'MMMM d, y'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Place of birth:</strong> <% selectedPerson.place_of_birth%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Website:</strong> <% selectedPerson.homepage%>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Biography</h4>
+                                <% selectedPerson.biography%>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-button--icon" id="btn1" ng-click="goBack()">
+                            <i class="material-icons">undo</i>
+                        </button>
+                    </section>
+                    <!-- movie detail-->
+                    <section id="movie-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <figure class="mdl-card__media">
+                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedMovie.poster_path %>" alt="poster_photo" />
+                            </figure>
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><% selectedMovie.title%> <small><% selectedMovie.tagline%></small></h2>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <ul class="mdl-list">
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Original title:</strong> <% selectedMovie.original_title %>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Release date:</strong> <% selectedMovie.release_date | date:'MMMM d, y'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Status:</strong> <% selectedMovie.status%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Website:</strong> <% selectedMovie.homepage%>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Overview</h4>
+                                <% selectedMovie.overview%>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-button--icon" id="btn2" ng-click="goBack()">
+                            <i class="material-icons">undo</i>
+                        </button>
+                    </section>
+                    <!-- tv show detail-->
+                    <section id="tv-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <figure class="mdl-card__media">
+                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedTv.poster_path %>" alt="poster_photo" />
+                            </figure>
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><% selectedTv.name%></h2>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <ul class="mdl-list">
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Original name:</strong> <% selectedTv.original_name %>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Status:</strong> <% selectedTv.status%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Last air date:</strong> <% selectedTv.last_air_date | date:'MMMM d, y'%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Seasons:</strong> <% selectedTv.number_of_seasons%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Episodes:</strong> <% selectedTv.number_of_episodes%>
+                                        </span>
+                                    </li>
+                                    <li class="mdl-list__item">
+                                        <span class="mdl-list__item-primary-content">
+                                            <strong>Website:</strong> <% selectedTv.homepage%>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Overview</h4>
+                                <% selectedTv.overview%>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-button--icon" id="btn3" ng-click="goBack()">
+                            <i class="material-icons">undo</i>
+                        </button>
                     </section>
                 </div>
                 <footer class="mdl-mega-footer">
-                    <div class="mdl-mega-footer--middle-section">
-                        <div class="mdl-mega-footer--drop-down-section">
-                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                            <h1 class="mdl-mega-footer--heading">Features</h1>
-                            <ul class="mdl-mega-footer--link-list">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Partners</a></li>
-                                <li><a href="#">Updates</a></li>
-                            </ul>
-                        </div>
-                        <div class="mdl-mega-footer--drop-down-section">
-                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                            <h1 class="mdl-mega-footer--heading">Details</h1>
-                            <ul class="mdl-mega-footer--link-list">
-                                <li><a href="#">Spec</a></li>
-                                <li><a href="#">Tools</a></li>
-                                <li><a href="#">Resources</a></li>
-                            </ul>
-                        </div>
-                        <div class="mdl-mega-footer--drop-down-section">
-                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                            <h1 class="mdl-mega-footer--heading">Technology</h1>
-                            <ul class="mdl-mega-footer--link-list">
-                                <li><a href="#">How it works</a></li>
-                                <li><a href="#">Patterns</a></li>
-                                <li><a href="#">Usage</a></li>
-                                <li><a href="#">Products</a></li>
-                                <li><a href="#">Contracts</a></li>
-                            </ul>
-                        </div>
-                        <div class="mdl-mega-footer--drop-down-section">
-                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-                            <h1 class="mdl-mega-footer--heading">FAQ</h1>
-                            <ul class="mdl-mega-footer--link-list">
-                                <li><a href="#">Questions</a></li>
-                                <li><a href="#">Answers</a></li>
-                                <li><a href="#">Contact us</a></li>
-                            </ul>
-                        </div>
-                    </div>
                     <div class="mdl-mega-footer--bottom-section">
                         <div class="mdl-logo">
-                            More Information
+                            Proudly powered by Steven Villegas
                         </div>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Privacy and Terms</a></li>
-                        </ul>
                     </div>
                 </footer>
             </main>
         </div>
         <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../js/angularjs/angular.min.js"></script>
+        <script type="text/javascript" src="../js/angularjs/i18n/angular-locale_en-us.js"></script>
         <script type="text/javascript" src="../js/angularjs/angular-resource.min.js"></script>
         <script type="text/javascript" src="../js/custom/modules/actorFinderModule.js"></script>
         <script type="text/javascript" src="../js/custom/controllers/actorFinderController.js"></script>
