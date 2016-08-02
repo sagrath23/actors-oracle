@@ -111,7 +111,7 @@
                             </div>
                         </div>
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
-                            <i class="material-icons">undo</i> return
+                            <i class="material-icons">undo</i>
                         </button>
                     </section>
                     <!-- movie detail-->

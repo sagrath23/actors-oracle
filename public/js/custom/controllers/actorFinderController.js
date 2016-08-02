@@ -64,6 +64,12 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
         };
         
         $scope.goBack = function(){
-            
+            console.log('return to new search');
+            $scope.searchTerm = null;
+            $scope.suggestedActors = null;
+            $('#person-detail-panel').hide('slow');
+            $('#movie-detail-panel').hide('slow');
+            $('#tv-detail-panel').hide('slow');
+            $('#search-panel').show('slow');        
         };
     }]);
