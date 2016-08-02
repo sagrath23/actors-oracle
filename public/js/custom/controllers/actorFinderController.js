@@ -63,4 +63,7 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
             //animate transition
         };
         
+        $scope.goBack = function(){
+            
+        };
     }]);

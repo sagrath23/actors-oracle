@@ -110,14 +110,9 @@
                                 <a href="#" class="mdl-button">Read our features</a>
                             </div>
                         </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-                            <i class="material-icons">more_vert</i>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" ng-click="goBack()">
+                            <i class="material-icons">undo</i> return
                         </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
                     </section>
                     <!-- movie detail-->
                     <section id="movie-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
