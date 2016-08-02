@@ -31,6 +31,7 @@ angular.module('actorFinderApp').controller('ActorFinderController', ['$scope', 
                             //hide search panel
                             $('#search-panel').hide('slow');
                             $('#person-detail-panel').show('slow');
+                            $('#person-detail-panel').css({'display': 'flex'});
                         },
                         function(data){
                             console.log('something bad happened');
