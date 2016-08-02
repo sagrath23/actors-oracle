@@ -36,14 +36,7 @@ class TMDBController extends Controller
     }
     
     public function suggestContents(Request $request){
-        if ($request->has('searchTerm')) {
-            $stringPattern = $request->input('searchTerm');
-            return $this->callAPI('search/multi', 'query='.$stringPattern);
-        }
-        else{
-            return null;
-        }
-        
+        return $this->callAPI('search/multi', 'query='.$request->json()->get('searchTerm'));        
     }
     
     /**
