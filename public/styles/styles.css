@@ -42,6 +42,7 @@ html, body {
     padding: 8px;
     padding-top: 48px;
 }
+/*
 .mdl-demo .mdl-card {
     height: auto;
     display: -webkit-flex;
@@ -51,6 +52,7 @@ html, body {
     -ms-flex-direction: column;
     flex-direction: column;
 }
+*/
 .mdl-demo .mdl-card > * {
     height: auto;
 }
