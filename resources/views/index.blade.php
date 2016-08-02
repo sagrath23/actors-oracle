@@ -125,7 +125,7 @@
                         </button>
                     </section>
                     <!-- movie detail-->
-                    <section id="movie-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <section id="movie-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
                         <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <figure class="mdl-card__media">
                                 <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedMovie.poster_path %>" alt="poster_photo" />
@@ -171,7 +171,7 @@
                         </button>
                     </section>
                     <!-- tv show detail-->
-                    <section id="tv-detail-panel" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <section id="tv-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
                         <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--3dp">
                             <figure class="mdl-card__media">
                                 <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedTv.poster_path %>" alt="poster_photo" />
