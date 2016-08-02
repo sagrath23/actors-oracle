@@ -82,7 +82,7 @@
                         </ul>
                     </section>
                     <!-- person detail-->
-                    <section id="person-detail-panel" class="section--center mdl-grid mdl-shadow--2dp">
+                    <section id="person-detail-panel" class="section--center content-grid mdl-grid mdl-shadow--2dp">
                         <!--
                         <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
                             <img alt="item_image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<% selectedPerson.profile_path %>"
