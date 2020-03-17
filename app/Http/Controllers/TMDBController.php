@@ -14,7 +14,7 @@ class TMDBController extends Controller
     //debug mode
     private $_debug = false;
     //tmdb API Key
-    private $apikey = '27a5c62118c2f9e8ee200f2bdd5269f8';
+    private $apikey = getenv('TMDB_API_KEY');
     //query language
     private $lang = 'en';
     
